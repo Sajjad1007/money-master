@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Money Master</title>
+  <link rel="shortcut icon" href="./assets/icon.png" type="image/x-icon">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="overflow-y-scroll px-4 sm:px-6 lg:px-10 xl:px-14 2xl:px-20 container mx-auto">
+  <header class="text-center pt-4 pb-5">
+    <h1 onclick="window.location.href='./index.html'"><a
+        class="btn btn-ghost p-0 gap-0 text-3xl font-bold text-fuchsia-600">Money Master</a></h1>
+  </header>
+
+  <main class="mb-5">
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-5 2xl:gap-8">
+      <img class="h-full 2xl:h-[42rem] md:w-full rounded-xl object-cover" src="assets/money.png" loading="lazy"
+        alt="Money">
+      <div class="bg-fuchsia-100 px-6 pt-10 pb-8 rounded-xl text-center">
+        <h5 class="text-xl font-bold mb-6">Income</h5>
+        <div class="mb-8 flex items-center">
+          <label for="income" class="font-bold min-w-20 text-left">Income :</label>
+          <input type="text" class="form-input h-10 rounded-lg px-4 w-full" id="income">
+        </div>
+        <h5 class="text-xl font-bold mb-6">Expenses</h5>
+        <div class="mb-4 flex items-center">
+          <label for="food" class="font-bold min-w-20 text-left">Food :</label>
+          <input type="text" class="form-input h-10 rounded-lg px-4 w-full" id="food">
+        </div>
+        <div class="mb-4 flex items-center">
+          <label for="rent" class="font-bold min-w-20 text-left">Rent :</label>
+          <input type="text" class="form-input h-10 rounded-lg px-4 w-full" id="rent">
+        </div>
+        <div class="mb-4 flex items-center">
+          <label for="clothes" class="font-bold min-w-20 text-left">Clothes :</label>
+          <input type="text" class="flex-grow form-input h-10 rounded-lg px-4 w-full" id="clothes">
+        </div>
+        <button
+          class="btn btn-sm min-h-8 h-10 bg-fuchsia-600 hover:bg-fuchsia-600 hover:border-fuchsia-100 hover:opacity-80 text-white px-4 rounded-lg font-bold text-base my-2"
+          onclick="calculateExpense()">Calculate</button>
+        <div class="grid grid-cols-1 md:grid-cols-2 text-left my-6">
+          <h5 class="my-2 font-bold">Total Expenses :&nbsp;&nbsp;&nbsp;<span id="total-expenses"></span></h5>
+          <h5 class="mb-2 md:my-2 font-bold">Current Balance :&nbsp;&nbsp;&nbsp;<span id="current-balance"></span></h5>
+        </div>
+        <div class="mb-6 flex items-center">
+          <label for="save-percentage" class="font-bold min-w-14 text-left">Save :</label>
+          <input type="text" class="form-input h-10 rounded-lg px-4 w-32 flex-grow" id="save-percentage">
+          <h4 class="font-bold mr-2 ml-1">%</h4>
+          <button
+            class="btn btn-sm min-h-8 h-10 bg-fuchsia-600 hover:bg-fuchsia-600 hover:border-fuchsia-100 hover:opacity-80 text-white px-4 rounded-lg font-bold text-base"
+            onclick="calculateSavings()">Save</button>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 text-left mt-6">
+          <h5 class="my-2 font-bold">Saving Amount :&nbsp;&nbsp;&nbsp;<span id="saving-amount"></span></h5>
+          <h5 class="font-bold md:my-2">Remaining Balance :&nbsp;&nbsp;&nbsp;<span id="remaining-balance"></span></h5>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./main.js"></script>
+</body>
+
+</html>
