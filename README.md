@@ -4,7 +4,7 @@
 
 Welcome to **Money Master**, a modern and fully responsive website designed to help users to track their income and budget monthly expenses. The project aims to provide an engaging and seamless user experience, ensuring a visually appealing layout with easy accessibility on mobile, tablet and desktop devices.
 
-### [Click here](https://money-master-sajjadur-rahman.netlify.app/) to visit the website.
+### [Click here](https://money-master-by-sajjadur-rahman.netlify.app/) to visit the website.
 
 ## Technologies Used
 
